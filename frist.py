@@ -36,9 +36,8 @@
 
 # Arethmetic Opretors ( + , - , * , /, %, // , ** )
 
-a = 10 
-b = 5
-
+# a = 10 
+# b = 5
 # print(a + b)
 # print(a - b)
 # print(a * b)
@@ -53,5 +52,32 @@ b = 5
 #Modulo use (%)
 # print(a % b)
 
-#Bod mass law ( )
-print(4 + 25 / 5 * 4 - 3)
+#Bod mass law ( / , * , + , - )
+# print(4 + 25 / 5 * 4 - 3)
+
+#compound assignemnt operator ( += , -= , *= , /= , %= , **= , //= )
+# a = 20
+# print(a)
+# 
+# a += a
+# print(a)
+# 
+# a -= a
+# print(a)
+# 
+# a *= a
+# print(a)
+
+#comparison operators ( == , != , > , < , >= , <= ) (True , False)
+# print(10 == 10)
+# print(20 != 20)
+# print(20 >= 10)
+# print(10 <= 20)
+# print(10 > 20)
+# print(20 < 10)
+#the comparison operator are used to compare two values and return true or false
+
+#Logical operators ( and , or , not )
+# print(20 > 55 and 10 ==10)
+# print(20 > 55 or 10 ==10)
+# print(not 20 > 55 and 10 ==10)
