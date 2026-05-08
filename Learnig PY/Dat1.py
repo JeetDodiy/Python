@@ -34,6 +34,8 @@
 #  age = int(input("Input your age:"))
 #  print(f"This is my name :- {name} and this my age :-{age}")
 
+#----------------------------------------------------------------
+
 # Arethmetic Opretors ( + , - , * , /, %, // , ** )
 
 # a = 10 
@@ -55,6 +57,8 @@
 #Bod mass law ( / , * , + , - )
 # print(4 + 25 / 5 * 4 - 3)
 
+#----------------------------------------------------------------
+
 #compound assignemnt operator ( += , -= , *= , /= , %= , **= , //= )
 # a = 20
 # print(a)
@@ -68,6 +72,8 @@
 # a *= a
 # print(a)
 
+#----------------------------------------------------------------
+
 #comparison operators ( == , != , > , < , >= , <= ) (True , False)
 # print(10 == 10)
 # print(20 != 20)
@@ -76,6 +82,8 @@
 # print(10 > 20)
 # print(20 < 10)
 #the comparison operator are used to compare two values and return true or false
+
+#----------------------------------------------------------------
 
 #Logical operators ( and , or , not )
 # print(20 > 55 and 10 ==10)

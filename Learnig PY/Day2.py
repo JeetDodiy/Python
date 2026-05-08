@@ -103,3 +103,51 @@
 #     print(f"your city temperature was very Hot {temperature}")      
 # else:
 #     print(f"your city temperature is on fire {temperature}")      
+
+#----------------------------------------------------------------
+#----------------------------------------------------------------
+
+#Loop Statemant in PY two type of looping statment 
+# (1st) For loop
+# (2sd) while loop
+
+#(1st) for loop
+
+#----------------------------------------------------------------
+
+# range(Starting point , Ending Point (n-1) , Steps like 1,-1)
+
+# for i in range(1,11,1):
+#     print(i)
+
+#----------------------------------------------------------------
+
+#print ting negative number
+# for i in range(5,-5,-1):
+#     print(i)
+
+#----------------------------------------------------------------
+
+#normal table 
+# for i in range(1,11,1):
+#     print(f"53 * {i} = {i*53}")
+
+#----------------------------------------------------------------
+
+#table 12 in PY
+# for i in range(12,121,12):
+#     print(i)
+
+#----------------------------------------------------------------
+
+#Create table using user input
+# num = int(input("insert table number you want :- "))
+# for i in range(num , num*10+1,num):
+#     print(i)
+
+#----------------------------------------------------------------
+
+#cut to
+# name = "Dodiya jeet k."
+# for i in range(len(name)):
+#     print(name[i])
