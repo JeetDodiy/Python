@@ -35,3 +35,10 @@
 # counte = a.count(8)
 # print(counte)
 
+
+#tuple unpaking
+
+# a,b,d,f = (1,2,5,8)
+
+# print(f'{a} , {b} , {d} , {f}')
+
