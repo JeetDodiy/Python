@@ -75,4 +75,40 @@ b = {4,5,6,7,8,9}
 
 # print(a)
 
+#dictionary in python
+#In dictionary thw kay or 
 
+# a = {}
+# a = {"key":"Value","key":"Value","key":"Value"}
+# print(type(a))
+
+# a = {1:10,"hii":20}
+# print(a)
+
+
+a = {12:10,20:15,30:"jeet","jeet":True}
+
+# print(a[35]) #print value using key
+# a[30] = 35 #update value using key
+# a.update({39:"jeet"}) #Inset new value using update function
+# del a[35] delet the value using del function
+# print(a)
+
+# for i in a:
+#     print(a[i])
+
+
+# -------------------------------------------------------IPM----------------------------------------------------------------------
+# In python two type of copy function is avelable                                                                                 |
+# 1 = hard copy ex. a = b                                                                                                         |
+# the hard copy copy the all the value and adress. were we change the value of b the automaticaliy chang a variable value also    |
+#                                                                                                                                 |
+# 2 = shallow copy ex. a.copy                                                                                                     |
+# the shallow copy was only  copy one time that was not chang value of perant copy variyble                                       |
+# --------------------------------------------------------------------------------------------------------------------------------
+
+# a.clear()
+# print(a)
+
+# b = a.copy()
+# print(b)
