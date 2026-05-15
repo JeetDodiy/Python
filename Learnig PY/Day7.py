@@ -112,3 +112,4 @@ a = {12:10,20:15,30:"jeet","jeet":True}
 
 # b = a.copy()
 # print(b)
+# thats it
