@@ -1,5 +1,5 @@
 #set
-s = {-12,1,2,3,5,2,1,4,8,7}
+# s = {-12,1,2,3,5,2,1,4,8,7}
 # print(s)
 # print(type(s))
 
@@ -26,8 +26,8 @@ s = {-12,1,2,3,5,2,1,4,8,7}
 
 #sume set oprection
 #murge two set 
-a = {1,2,3,4,5}
-b = {4,5,6,7,8,9}
+# a = {1,2,3,4,5}
+# b = {4,5,6,7,8,9}
 
 # c =a.union(b)
 # print(c)
@@ -86,7 +86,7 @@ b = {4,5,6,7,8,9}
 # print(a)
 
 
-a = {12:10,20:15,30:"jeet","jeet":True}
+# a = {12:10,20:15,30:"jeet","jeet":True}
 
 # print(a[35]) #print value using key
 # a[30] = 35 #update value using key
