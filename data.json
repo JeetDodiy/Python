@@ -1,18 +1,26 @@
 [
     {
-        "name": "jeet",
-        "age": 25,
-        "email": "email@gmail.com",
-        "pin": 4585,
-        "account_no.": "D9v6^m8",
-        "blance": 0
-    },
-    {
-        "name": "kalse",
+        "name": "rakesh jujun vala",
         "age": 55,
-        "email": "kalse@gmial.com",
-        "pin": 4528,
+        "email": "rakesh#gmail.com",
+        "pin": 5555,
         "account_no.": "U67#4eB",
         "blance": 15000
+    },
+    {
+        "name": "jeet Dodiya",
+        "age": 58,
+        "email": "rakeshkhana@gmail.com",
+        "pin": "4545",
+        "account_number": "QFC1209",
+        "balance": 0
+    },
+    {
+        "name": "nayan",
+        "age": 55,
+        "email": "Email@Gmail.com",
+        "pin": "4545",
+        "account_number": "OHI1230",
+        "balance": 0
     }
 ]

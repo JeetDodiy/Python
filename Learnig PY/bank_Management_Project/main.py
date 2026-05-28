@@ -86,6 +86,55 @@ class Bank:
             for i in userdata[0]:
                 print(f"{i} : {userdata[0][i]}")
                 
+    def updatedata(self):
+        accnumber = input("Enter your Account numebr")
+        accpin = int(input("Enter your Account pin:"))
+        userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == accpin]
+        if userdata == False:
+            print("Your account is not in Bank")
+        else:
+            print("you can't chang the Age , Account number and Blance\n")
+            newDiteal = {
+                "name" : input("Enter your New name:"),
+                "email": input("Enter your New email Id:"),
+                "pin" : input("enter your New pin:")
+            }
+            if newDiteal["name"] == "":
+                newDiteal["name"] = userdata[0]['name']
+            if newDiteal["email"] == "":
+                newDiteal["email"] = userdata[0]['email']
+            if newDiteal["pin"] == "":
+                newDiteal["pin"] = userdata[0]['pin']
+                
+            newDiteal["age"] = userdata[0]['age']
+            newDiteal["account_no."] = userdata[0]['account_no.']
+            newDiteal["blance"] = userdata[0]['blance']
+            
+            if type(newDiteal["pin"]) == str:
+                newDiteal["pin"] = int(newDiteal["pin"])
+            for i in newDiteal:
+                if newDiteal[i] == userdata[0][i]:
+                    continue
+                else:
+                    userdata[0][i] = newDiteal[i]
+            Bank.update()
+            print("Ditails update sucsessfully ")      
+    def deletacc(self):
+        accnumber = input("Eter your Bank Account numbr :")
+        accpin = int(input("Enter your Bank Acount pin"))
+        userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == accpin]
+        if userdata == False:
+            print("your bank Deteail is unavelebal")
+        else:
+            check = input("Press Y to conform delet Account and Press N to don't delet account:")
+            if check == 'n' or check == "N":
+                print("Ok You Don't Want to Delet your Accoutn:")
+            elif check == "y" or check == "Y":
+                print("All write you want to delet your Account:")
+                index = Bank.data.index(userdata[0])
+                Bank.data.pop(index)
+                Bank.update()  
+            
             
 user = Bank()
 print("Press 1 to create acount")
@@ -107,3 +156,9 @@ if check == 3:
 
 if check == 4:
     user.Details()
+
+if check == 5:
+    user.updatedata()
+
+if check == 6:
+    user.deletacc()
