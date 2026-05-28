@@ -76,7 +76,16 @@ class Bank:
                     userdata[0]['blance'] -= ammount
                     print(f'Your Widrow was sacses now your blance was :{userdata[0]['blance']}')
                     Bank.update()
-        
+    def Details(self):
+        accnumber = input("enter your Account number :")
+        accpin = int(input("Enter your Account Pin:"))
+        userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == accpin]
+        if userdata == False:
+            print("Your Bank account was not in Bank")
+        else:
+            for i in userdata[0]:
+                print(f"{i} : {userdata[0][i]}")
+                
             
 user = Bank()
 print("Press 1 to create acount")
@@ -95,3 +104,6 @@ if check == 2:
 
 if check == 3:
     user.widrow()
+
+if check == 4:
+    user.Details()
