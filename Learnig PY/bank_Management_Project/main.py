@@ -44,6 +44,39 @@ class Bank:
             print("Pliss not doun the account number")
             Bank.data.append(info)
             Bank.update()
+    def depositMoney(self):
+        accNumber = input("Enter your Bank Account Number:")
+        accPin = int(input("Enter your Bank Account Pin:"))
+        userData = [i for i in Bank.data if i['account_no.'] == accNumber and i['pin'] == accPin]
+        
+        if userData == False:
+            print("your Account is not in the Bank")
+        else:
+            ammount = int(input("Enset your Ammouunt for Diposit:"))
+            if ammount > 10000 or 0 > ammount:
+                print("You can not diposit your mony bicos your ammount is above 10,000 and lover 0")
+            else:
+                userData[0]['blance'] += ammount
+                Bank.update()
+                
+    def widrow(self):
+        accnumber = input("Enter your Account number:")
+        pinnum = int(input("enter your Pin:"))
+        userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == pinnum]
+        if userdata == False:
+            print("your account was not in Bank ")
+        else:
+            ammount = int(input("Enter your Widrol Amount:"))
+            if ammount > 10000 or 0> ammount:
+                print("your Ammount was above 10,000 or lesthan 0 thats why you can't widrow")
+            else:
+                if userdata[0]['blance'] < ammount:
+                        print(f"you can not Widrow ammount gretar than you Bank balence :{userdata[0]['blance']}")
+                else:
+                    userdata[0]['blance'] -= ammount
+                    print(f'Your Widrow was sacses now your blance was :{userdata[0]['blance']}')
+                    Bank.update()
+        
             
 user = Bank()
 print("Press 1 to create acount")
@@ -56,3 +89,9 @@ print("Press 6 to Delet the Account")
 check = int(input("Enter your choice: "))
 if check == 1:
     user.createAccount()
+
+if check == 2:
+    user.depositMoney()
+
+if check == 3:
+    user.widrow()
