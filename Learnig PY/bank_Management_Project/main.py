@@ -143,22 +143,31 @@ print("Press 3 to Widrow the money")
 print("Press 4 to Details")
 print("Press 5 to Update the Details")
 print("Press 6 to Delet the Account")
+print("Press 7 to Exit")
 
-check = int(input("Enter your choice: "))
-if check == 1:
-    user.createAccount()
 
-if check == 2:
-    user.depositMoney()
+while True:
+    try:
+        check = int(input("Enter your choice: "))
+        if check == 1:
+            user.createAccount()
 
-if check == 3:
-    user.widrow()
+        if check == 2:
+            user.depositMoney()
 
-if check == 4:
-    user.Details()
+        if check == 3:
+            user.widrow()
 
-if check == 5:
-    user.updatedata()
+        if check == 4:
+            user.Details()
 
-if check == 6:
-    user.deletacc()
+        if check == 5:
+            user.updatedata()
+
+        if check == 6:
+            user.deletacc()
+        if check == 7 :
+            print("Thank you for visiting the Bank")
+            break
+    except Exception as err:
+        print(f"Error as :{err}")
