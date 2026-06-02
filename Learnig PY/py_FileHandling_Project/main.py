@@ -39,7 +39,8 @@ def updateFile():
     try:
         name = input("enset ypur file name for update:")
         p = Path(name)
-        if p.exists and p.is_file:
+
+        if p.exists() and p.is_file():
             print("Enterr 1 to update file name:")
             print("Enterr 2 to Overwrite file:")
             print("Enterr 3 to  Apend sum text to file:")
@@ -64,7 +65,7 @@ def deletFile():
     try:
         name = input("Enter file name for Delet file: ")
         p = Path(name)
-        if p.exists and p.is_file:
+        if p.exists() and p.is_file():
             os.remove(p)
         print("file Dilet scsefuliy")
     except Exception as err:

@@ -49,7 +49,7 @@ class Bank:
         accPin = int(input("Enter your Bank Account Pin:"))
         userData = [i for i in Bank.data if i['account_no.'] == accNumber and i['pin'] == accPin]
         
-        if userData == False:
+        if not userData:
             print("your Account is not in the Bank")
         else:
             ammount = int(input("Enset your Ammouunt for Diposit:"))
@@ -63,7 +63,7 @@ class Bank:
         accnumber = input("Enter your Account number:")
         pinnum = int(input("enter your Pin:"))
         userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == pinnum]
-        if userdata == False:
+        if not userdata:
             print("your account was not in Bank ")
         else:
             ammount = int(input("Enter your Widrol Amount:"))
@@ -74,13 +74,13 @@ class Bank:
                         print(f"you can not Widrow ammount gretar than you Bank balence :{userdata[0]['blance']}")
                 else:
                     userdata[0]['blance'] -= ammount
-                    print(f'Your Widrow was sacses now your blance was :{userdata[0]['blance']}')
+                    print(f"Your Widrow was sacses now your blance was :{userdata[0]['blance']}")
                     Bank.update()
     def Details(self):
         accnumber = input("enter your Account number :")
         accpin = int(input("Enter your Account Pin:"))
         userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == accpin]
-        if userdata == False:
+        if not userdata:
             print("Your Bank account was not in Bank")
         else:
             for i in userdata[0]:
@@ -90,7 +90,7 @@ class Bank:
         accnumber = input("Enter your Account numebr")
         accpin = int(input("Enter your Account pin:"))
         userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == accpin]
-        if userdata == False:
+        if not userdata:
             print("Your account is not in Bank")
         else:
             print("you can't chang the Age , Account number and Blance\n")
@@ -123,7 +123,7 @@ class Bank:
         accnumber = input("Eter your Bank Account numbr :")
         accpin = int(input("Enter your Bank Acount pin"))
         userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == accpin]
-        if userdata == False:
+        if not userdata:
             print("your bank Deteail is unavelebal")
         else:
             check = input("Press Y to conform delet Account and Press N to don't delet account:")
