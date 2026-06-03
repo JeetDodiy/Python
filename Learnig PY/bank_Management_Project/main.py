@@ -87,7 +87,7 @@ class Bank:
                 print(f"{i} : {userdata[0][i]}")
                 
     def updatedata(self):
-        accnumber = input("Enter your Account numebr")
+        accnumber = input("Enter your Account numebr :")
         accpin = int(input("Enter your Account pin:"))
         userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == accpin]
         if not userdata:
@@ -121,7 +121,7 @@ class Bank:
             print("Ditails update sucsessfully ")      
     def deletacc(self):
         accnumber = input("Eter your Bank Account numbr :")
-        accpin = int(input("Enter your Bank Acount pin"))
+        accpin = int(input("Enter your Bank Acount pin : "))
         userdata = [i for i in Bank.data if i['account_no.'] == accnumber and i['pin'] == accpin]
         if not userdata:
             print("your bank Deteail is unavelebal")
@@ -137,16 +137,16 @@ class Bank:
             
             
 user = Bank()
-print("Press 1 to create acount")
-print("Press 2 to Dipositing the money in the Bank")
-print("Press 3 to Widrow the money")
-print("Press 4 to Details")
-print("Press 5 to Update the Details")
-print("Press 6 to Delet the Account")
-print("Press 7 to Exit")
-
 
 while True:
+    print("Press 1 to create acount")
+    print("Press 2 to Dipositing the money in the Bank")
+    print("Press 3 to Widrow the money")
+    print("Press 4 to Details")
+    print("Press 5 to Update the Details")
+    print("Press 6 to Delet the Account")
+    print("Press 7 to Exit")
+
     try:
         check = int(input("Enter your choice: "))
         if check == 1:
