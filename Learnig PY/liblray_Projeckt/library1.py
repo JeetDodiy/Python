@@ -83,19 +83,27 @@ print("Enter 3 to Search Book")
 print("Enter 4 to Update Book")
 print("Enter 5 to Delet Book")
 print("Enter 6 to Close the Library:")
-check = int(input("Enter Your Choice :"))
 
-if check == 1:
-    lb.addbook()
+try:
+    while True:
+        check = int(input("Enter Your Choice :"))
 
-if check == 2:
-    lb.library_all_book_info()
+        if check == 1:
+            lb.addbook()
 
-if check == 3:
-    lb.search_book()
+        if check == 2:
+            lb.library_all_book_info()
 
-if check == 4:
-    lb.update_book()
+        if check == 3:
+            lb.search_book()
 
-if check == 5:
-    lb.delet_book()    
+        if check == 4:
+            lb.update_book()
+
+        if check == 5:
+            lb.delet_book()
+        if check == 6:
+            print("Thak you for wisting Library")
+            break
+except Exception as err:
+    print(f"Sum Isusu : {err}")
