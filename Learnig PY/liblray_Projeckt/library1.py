@@ -26,20 +26,48 @@ class Library1:
         }
         Library1.data.append(addBook)
         Library1.update_Database() 
-        print("All is good")
+        print("Book Add sucses fully")
         
+    def library_all_book_info(self):
+        for i in range(len(Library1.data)):
+            print(f"\nBook Number : {i+1}")
+            print(f"Book name : {Library1.data[i]["book_name"]}")
+            print(f"Book Auther : {Library1.data[i]["book_auther"]}")
+            print(f"Book Code : {Library1.data[i]["book_code"]}")
     
+    def search_book(self):
+        book_Name = input("Enter Book Name for search:")
+        book_Info = [i for i in Library1.data if i["book_name"] == book_Name]
+        if not book_Info:
+            print("Your Book is not in Library")
+        else:
+            for i in book_Info[0]:
+                print(f"\n{i} : {book_Info[0][i]}")
+                
+   
+                
+            
+        
+        
     
 lb = Library1()  
 print("Enter 1 to add Book")
-print("Enter 2 to Dain Info of Books")
-print("Enter 3 to Update Book")
-print("Enter 4 to Delet Book")
-print("Enter 5 to Close the Library:")
+print("Enter 2 to All Book Info")
+print("Enter 3 to Search Book")
+print("Enter 4 to Update Book")
+print("Enter 5 to Delet Book")
+print("Enter 6 to Close the Library:")
 check = int(input("Enter Your Choice :"))
 
 if check == 1:
     lb.addbook()
 
-    
+if check == 2:
+    lb.library_all_book_info()
+
+if check == 3:
+    lb.search_book()
+
+if check == 4:
+    lb.update_book()
     
