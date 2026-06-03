@@ -59,9 +59,21 @@ class Library1:
                 book_info[0]["book_auther"] = book_Auther
                 Library1.update_Database()    
                 print("Update successfully Update")
-            
-            
         
+    def delet_book(self):
+        check_book = input("Enter Your Book Name:")
+        book_info = [i for i in Library1.data if i["book_name"] == check_book]
+        if not book_info:
+            print("Your Book is not in Library")
+        else:
+            con = input("Ask ageain You Curnform to delet Book yes to type Y or N :")
+            if con == "n" or con == "N":    
+                print("Book was Not Delet")    
+            elif con == "Y" or con == "y":
+                index = Library1.data.index(book_info[0])
+                Library1.data.pop(index)
+                Library1.update_Database()
+                print("Delet sucsesfully")
         
     
 lb = Library1()  
@@ -84,4 +96,6 @@ if check == 3:
 
 if check == 4:
     lb.update_book()
-    
+
+if check == 5:
+    lb.delet_book()    
