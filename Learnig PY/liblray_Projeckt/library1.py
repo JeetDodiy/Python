@@ -44,8 +44,22 @@ class Library1:
             for i in book_Info[0]:
                 print(f"\n{i} : {book_Info[0][i]}")
                 
-   
-                
+    def update_book(self):
+        check_book =input("Enter Your book name For update :")
+        print("\nYou Can Onliy Update Book auther Name")
+        book_info = [i for i in Library1.data if i["book_name"] == check_book]
+        if not book_info:
+            print("your Book in not in Library")
+        else:
+            book_Auther = input("Entr New Auther Of book:")
+            
+            if book_Auther == "":
+                book_Auther = book_info[0]["book_auther"]
+            else:
+                book_info[0]["book_auther"] = book_Auther
+                Library1.update_Database()    
+                print("Update successfully Update")
+            
             
         
         
